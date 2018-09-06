@@ -1,0 +1,8 @@
+- src: coopdevs.sys-admins-role
+  version: v0.0.1
+
+- src: geerlingguy.htpasswd
+  version: 1.0.0
+
+- src: jdauphant.nginx
+  version: v2.18.1

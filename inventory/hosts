@@ -1,0 +1,10 @@
+[staging]
+elk.danpalrod.xyz
+
+[dev]
+local.elk.coop
+
+[elkservers:children]
+staging
+dev
+
