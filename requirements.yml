@@ -4,5 +4,8 @@
 - src: geerlingguy.htpasswd
   version: 1.0.0
 
+- src: geerlingguy.logstash
+  version: 3.0.1
+
 - src: jdauphant.nginx
   version: v2.18.1
