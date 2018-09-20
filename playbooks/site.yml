@@ -12,6 +12,8 @@
   - role: elasticsearch
   - role: kibana
   - role: metricbeat
+  - role: geerlingguy.logstash
+
   - role: geerlingguy.htpasswd
     vars:
       htpasswd_credentials:
