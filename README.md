@@ -22,6 +22,7 @@ This playbook do run the next community roles:
 * [Geerlingguy Java](https://galaxy.ansible.com/geerlingguy.java)
 * [Geerlingguy Elasticsearch](https://galaxy.ansible.com/geerlingguy.elasticsearch)
 * [Geerlingguy Logstash](https://galaxy.ansible.com/geerlingguy.logstash)
+* [Geerlingguy Kibana](https://galaxy.ansible.com/geerlingguy.kibana)
 
 To use, run:
 ```
@@ -54,6 +55,7 @@ ansible-galaxy install -r requirements.yml
 * [Geerlingguy Java](https://galaxy.ansible.com/geerlingguy.java)
 * [Geerlingguy Elasticsearch](https://galaxy.ansible.com/geerlingguy.elasticsearch)
 * [Geerlingguy Logstash](https://galaxy.ansible.com/geerlingguy.logstash)
+* [Geerlingguy Kibana](https://galaxy.ansible.com/geerlingguy.kibana)
 
 ## Devenv
 
