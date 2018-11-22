@@ -23,6 +23,8 @@ This playbook do run the next community roles:
 * [Geerlingguy Elasticsearch](https://galaxy.ansible.com/geerlingguy.elasticsearch)
 * [Geerlingguy Logstash](https://galaxy.ansible.com/geerlingguy.logstash)
 * [Geerlingguy Kibana](https://galaxy.ansible.com/geerlingguy.kibana)
+* [Geerlingguy htpasswd](https://galaxy.ansible.com/geerlingguy.htpasswd)
+* [Jdauphant NGINX](https://galaxy.ansible.com/jdauphant.nginx)
 
 To use, run:
 ```
@@ -43,6 +45,12 @@ system_administrators:            # List of system administrators added to the g
     state:                        # User state (present/absent)
 ```
 
+* Basic Auth
+```YAML
+kibana_admin: "coopdevs"
+kibana_password: "1234"
+```
+
 ## Ansible Community Roles
 
 To download the community roles, you can run:
@@ -56,6 +64,8 @@ ansible-galaxy install -r requirements.yml
 * [Geerlingguy Elasticsearch](https://galaxy.ansible.com/geerlingguy.elasticsearch)
 * [Geerlingguy Logstash](https://galaxy.ansible.com/geerlingguy.logstash)
 * [Geerlingguy Kibana](https://galaxy.ansible.com/geerlingguy.kibana)
+* [Geerlingguy htpasswd](https://galaxy.ansible.com/geerlingguy.htpasswd)
+* [Jdauphant NGINX](https://galaxy.ansible.com/jdauphant.nginx)
 
 ## Devenv
 
