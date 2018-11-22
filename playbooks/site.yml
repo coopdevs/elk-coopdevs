@@ -16,7 +16,7 @@
     tags: logstash
     vars:
       logstash_dir: '/opt/logstash'
-#  - role: jradtilbrook.kibana
+  - role: geerlingguy.kibana
 #  - role: jradtilbrook.metricbeat
 #  - role: geerlingguy.htpasswd
 #    vars:
