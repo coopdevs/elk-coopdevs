@@ -14,8 +14,6 @@
       ES_SKIP_SET_KERNEL_PARAMETERS: "true"
   - role: geerlingguy.logstash
     tags: logstash
-    vars:
-      logstash_dir: '/opt/logstash'
   - role: geerlingguy.kibana
 #  - role: jradtilbrook.metricbeat
   - role: geerlingguy.htpasswd
