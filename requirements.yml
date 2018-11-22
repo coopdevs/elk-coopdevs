@@ -6,3 +6,12 @@
 
 - src: jdauphant.nginx
   version: v2.18.1
+
+- src: geerlingguy.java
+  version: 1.9.4
+
+- src: geerlingguy.logstash
+  version: 4.0.0
+
+- src: geerlingguy.elasticsearch
+  version: 3.0.1
