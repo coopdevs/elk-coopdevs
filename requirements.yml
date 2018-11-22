@@ -1,12 +1,6 @@
 - src: coopdevs.sys-admins-role
   version: v0.0.1
 
-- src: geerlingguy.htpasswd
-  version: 1.0.0
-
-- src: jdauphant.nginx
-  version: v2.18.1
-
 - src: geerlingguy.java
   version: 1.9.4
 
@@ -18,3 +12,9 @@
 
 - src: geerlingguy.kibana
   version: 3.2.1
+
+- src: geerlingguy.htpasswd
+  version: 1.0.0
+
+- src: jdauphant.nginx
+  version: v2.21.1
