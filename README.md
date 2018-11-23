@@ -19,6 +19,7 @@ This playybook use the [`sys-admins` role](https://github.com/coopdevs/sys-admin
 ### SetUp ELK server - `playbooks/site.yml`
 This playbook do run the next community roles:
 
+* [Geerlingguy Security](https://galaxy.ansible.com/geerlingguy.security)
 * [Geerlingguy Java](https://galaxy.ansible.com/geerlingguy.java)
 * [Geerlingguy Elasticsearch](https://galaxy.ansible.com/geerlingguy.elasticsearch)
 * [Geerlingguy Logstash](https://galaxy.ansible.com/geerlingguy.logstash)
@@ -60,6 +61,7 @@ ansible-galaxy install -r requirements.yml
 
 ### List of Galaxy roles:
 
+* [Geerlingguy Security](https://galaxy.ansible.com/geerlingguy.security)
 * [Geerlingguy Java](https://galaxy.ansible.com/geerlingguy.java)
 * [Geerlingguy Elasticsearch](https://galaxy.ansible.com/geerlingguy.elasticsearch)
 * [Geerlingguy Logstash](https://galaxy.ansible.com/geerlingguy.logstash)
