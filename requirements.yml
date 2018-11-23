@@ -1,6 +1,9 @@
 - src: coopdevs.sys-admins-role
   version: v0.0.1
 
+- src: geerlingguy.security
+  version: 1.8.0
+
 - src: geerlingguy.java
   version: 1.9.4
 

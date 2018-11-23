@@ -7,6 +7,7 @@
   vars:
     htpasswd_file: /etc/nginx/htpasswd.users
   roles:
+  - role: geerlingguy.security
   - role: geerlingguy.java
   - role: geerlingguy.elasticsearch
     environment:
