@@ -20,6 +20,7 @@
     tags: logstash
   - role: geerlingguy.kibana
 #  - role: jradtilbrook.metricbeat
+  - role: passlib
   - role: geerlingguy.htpasswd
     vars:
       htpasswd_credentials:

@@ -1,0 +1,5 @@
+---
+- name: Install Python3 passlib
+  apt:
+   name: python3-passlib
+   update_cache: yes
