@@ -10,6 +10,14 @@ This project has been thinked to run in Debian 9.0 (Stretch
 
 You can find more information about Ansible [here](http://docs.ansible.com/)
 
+### System Requirements
+
+* Ubuntu Bionic 18.04 LTS
+
+#### Minim hardware
+* 2 CPUs
+* 8 GB RAM
+
 ## Playbooks
 
 ### Create System Administrators users - `playbooks/sys_admins.yml`
