@@ -1,3 +1,2 @@
 ---
-# Use correct python2.7 interpeter
-ansible_python_interpreter: "/usr/bin/python2.7"
+ansible_python_interpreter: "/usr/bin/python3"
