@@ -1,5 +1,5 @@
 NAME="elk"
 DISTRIBUTION="ubuntu"
-RELEASE="xenial"
+RELEASE="bionic"
 ARCH="amd64"
 HOST="local.$NAME.coop"

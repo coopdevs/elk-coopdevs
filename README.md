@@ -10,6 +10,17 @@ This project has been thinked to run in Debian 9.0 (Stretch
 
 You can find more information about Ansible [here](http://docs.ansible.com/)
 
+### System Requirements
+
+* Ubuntu Bionic 18.04 LTS
+* Java version <= 8
+
+> Logstash doesn't support Java 10, which is available on Bionic from `openjdk-11-jre`. If you have it installed on your system, remove it. Use the older version until Logstash gets support, `openjdk-8-jre`.  
+
+#### Minim hardware
+* 2 CPUs
+* 8 GB RAM
+
 ## Playbooks
 
 ### Create System Administrators users - `playbooks/sys_admins.yml`

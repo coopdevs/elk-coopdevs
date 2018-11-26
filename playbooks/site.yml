@@ -9,6 +9,9 @@
   roles:
   - role: geerlingguy.security
   - role: geerlingguy.java
+    vars:
+      java_packages:
+        - openjdk-8-jre
   - role: geerlingguy.elasticsearch
     environment:
       # Putting the quotes around true is important here because, as ansible is python, it likes to pass true as True and the install script expects a lowercase true.
@@ -17,6 +20,7 @@
     tags: logstash
   - role: geerlingguy.kibana
 #  - role: jradtilbrook.metricbeat
+  - role: passlib
   - role: geerlingguy.htpasswd
     vars:
       htpasswd_credentials:
