@@ -1,4 +1,4 @@
-# Tryton Provision
+# ELK Stack Provision
 
 Ansible project to setup a server of log monitoring using the [ELK stack](https://www.elastic.co/elk-stack).
 
@@ -85,6 +85,11 @@ ansible-galaxy install -r requirements.yml
 We use [`devenv`](https://github.com/coopdevs/devenv) tool to manage the development environment. Check the `.devenv` configuration file.
 
 Install and run `devenv` to start a development environment.
+
+> With Ubuntu Bionic (18.04) you need install `gpg` package first of all. To allow to add new ppa repositories. You can run:
+> ```
+> lxc-attach -n <container-name> -- apt install gpg
+> ```
 
 ## Contributing
 
