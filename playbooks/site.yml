@@ -19,7 +19,7 @@
   - role: geerlingguy.logstash
     tags: logstash
   - role: geerlingguy.kibana
-#  - role: jradtilbrook.metricbeat
+  # We need install Python3 passlib library first of htpasswd because is a requirement. In Python2 is already installed, but to Python3 needs be installed.
   - role: passlib
   - role: geerlingguy.htpasswd
     vars:
