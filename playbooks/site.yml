@@ -38,20 +38,12 @@
           group: root
           mode: "u+rw,g+r"
 
-  - role: jdauphant.nginx
+  - name: coopdevs.certbot_nginx
     vars:
-      nginx_sites:
-       kibana:
-         - listen 80
-         - server_name "{{ inventory_hostname }}"
-         - auth_basic "Restricted Access"
-         - auth_basic_user_file "{{ htpasswd_file }}"
-         - location / {
-             proxy_pass http://localhost:5601;
-             proxy_http_version 1.1;
-             proxy_set_header Upgrade $http_upgrade;
-             proxy_set_header Connection 'upgrade';
-             proxy_set_header Host $host;
-             proxy_cache_bypass $http_upgrade;
-           }
+      domain_name: "{{ inventory_hostname }}"
+      letsencrypt_email: "{{ certificate_authority_email }}"
+      certbot_nginx_cert_name: "{{ inventory_hostname }}"
+    when: not development_environment
 
+  - role: jdauphant.nginx
+    when: not development_environment

@@ -1,2 +1,41 @@
 ---
 ansible_python_interpreter: "/usr/bin/python3"
+
+# Nginx configuration
+nginx_sites:
+  kibana:
+    - |
+      listen 80;
+      server_name {{ inventory_hostname }};
+      rewrite ^(.*)$ https://$host$1 permanent;
+  kibana.ssl:
+    - |
+      listen 443 ssl;
+      ssl_certificate /etc/letsencrypt/live/{{ inventory_hostname }}/fullchain.pem;
+      ssl_certificate_key /etc/letsencrypt/live/{{ inventory_hostname }}/privkey.pem;
+      include /etc/letsencrypt/options-ssl-nginx.conf;
+      ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+      server_name {{ inventory_hostname }};
+      proxy_read_timeout 720s;
+      proxy_connect_timeout 720s;
+      proxy_send_timeout 720s;
+      proxy_set_header X-Forwarded-Host $host;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header X-Forwarded-Proto $scheme;
+      proxy_set_header X-Real-IP $remote_addr;
+      ssl on;
+      access_log /var/log/nginx/kibana.access.log;
+      error_log /var/log/nginx/kibana.error.log;
+      auth_basic "Restricted Access";
+      auth_basic_user_file "{{ htpasswd_file }}";
+      location / {
+        proxy_pass http://localhost:5601;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+      }
+      gzip_types text/css text/less text/plain text/xml application/xml application/json application/javascript;
+      gzip on;
+
