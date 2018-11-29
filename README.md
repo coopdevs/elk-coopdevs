@@ -36,6 +36,7 @@ This playbook do run the next community roles:
 * [Geerlingguy Logstash](https://galaxy.ansible.com/geerlingguy.logstash)
 * [Geerlingguy Kibana](https://galaxy.ansible.com/geerlingguy.kibana)
 * [Geerlingguy htpasswd](https://galaxy.ansible.com/geerlingguy.htpasswd)
+* [Coopdevs Certbot NGINX](https://galaxy.ansible.com/coopdevs.certbot_nginx)
 * [Jdauphant NGINX](https://galaxy.ansible.com/jdauphant.nginx)
 
 To use, run:
@@ -57,10 +58,20 @@ system_administrators:            # List of system administrators added to the g
     state:                        # User state (present/absent)
 ```
 
+* NGINX, BAuth, Certbot
+```YAML
+development_environment:          # Set 'development_environment' to "true" to skip SSL and nginx tasks
+```
+
+* LetsEncrypt
+```YAML
+certificate_authority_email:      # Let's Encrypt configuration email
+```
+
 * Basic Auth
 ```YAML
-kibana_admin: "coopdevs"
-kibana_password: "1234"
+kibana_admin:                     # Basic Authentication user
+kibana_password:                  # Basic Authentication password
 ```
 
 ## Ansible Community Roles
@@ -72,12 +83,14 @@ ansible-galaxy install -r requirements.yml
 
 ### List of Galaxy roles:
 
+* [Coopdevs SysAdmins](https://galaxy.ansible.com/coopdevs.sys-admins-role)
 * [Geerlingguy Security](https://galaxy.ansible.com/geerlingguy.security)
 * [Geerlingguy Java](https://galaxy.ansible.com/geerlingguy.java)
 * [Geerlingguy Elasticsearch](https://galaxy.ansible.com/geerlingguy.elasticsearch)
 * [Geerlingguy Logstash](https://galaxy.ansible.com/geerlingguy.logstash)
 * [Geerlingguy Kibana](https://galaxy.ansible.com/geerlingguy.kibana)
 * [Geerlingguy htpasswd](https://galaxy.ansible.com/geerlingguy.htpasswd)
+* [Coopdevs Certbot NGINX](https://galaxy.ansible.com/coopdevs.certbot_nginx)
 * [Jdauphant NGINX](https://galaxy.ansible.com/jdauphant.nginx)
 
 ## Devenv
@@ -86,14 +99,16 @@ We use [`devenv`](https://github.com/coopdevs/devenv) tool to manage the develop
 
 Install and run `devenv` to start a development environment.
 
-> With Ubuntu Bionic (18.04) you need install `gpg` package first of all. To allow to add new ppa repositories. You can run:
+> :warning: **Ubuntu Bionic (18.04) needs install `gpg` package first of all.** :warning:
+
+> To allow to add new ppa repositories. You can run:
 > ```
 > lxc-attach -n <container-name> -- apt install gpg
 > ```
 
 ## Contributing
 
-1. Fork it (<https://github.com/coopdevs/tryton_provision>)
+1. Fork it (<https://github.com/coopdevs/elk-coopdevs>)
 2. Create your feature branch (`git checkout -b feature/fooBar`)
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
