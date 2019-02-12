@@ -3,3 +3,12 @@ DISTRIBUTION="ubuntu"
 RELEASE="bionic"
 ARCH="amd64"
 HOST="local.$NAME.coop"
+
+# Mount project vars
+# PROJECT_NAME=
+# PROJECT_PATH=
+# PROJECT_PATH=
+
+# User Management
+# DEVENV_USER=
+# DEVENV_GROUP=
